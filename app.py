@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_restful import Api
+
 from resourses.doctors import DoctorResource
 from resourses.patient import PatientResource
 from resourses.nurse import NurseResource
@@ -10,6 +11,7 @@ from resourses.prescriptions import Prescriptions
 
 app = Flask(__name__)
 api = Api(app)
+
 
 
 api.add_resource(DoctorResource, "/doctors", "/doctors/<int:doctor_id>")
