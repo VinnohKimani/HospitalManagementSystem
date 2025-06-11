@@ -10,6 +10,11 @@ from resourses.diagnosis import DiagnosisResource
 from resourses.prescriptions import Prescriptions
 
 app = Flask(__name__)
+
+# Cofiguring flask app using config object
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///hospitalManagementSystem.db"
+
+# Linking flask resfull with app
 api = Api(app)
 
 

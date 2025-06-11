@@ -8,7 +8,7 @@ class Prescriptions(Resource):
             return []
 
     def post(self):
-        return {"message": "Prescriptions Created"}
+        return {"message": "Prescriptions Created Testing push"}
 
     def patch(self, id):
         return {"message": "Prescriptions Updated"}
