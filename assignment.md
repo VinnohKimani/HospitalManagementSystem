@@ -9,13 +9,13 @@
 - Hospital Managemnt System
 
 # Entities
-- Doctor
-- Patient
-- Nurse
-- Billing
-- Diagnosis
-- Prescription
-- Appointment
+- Doctor(Vincent)
+- Patient(Ruth)
+- Nurse(Elfas)
+- Billing(Johnson)
+- Diagnosis(Vincent)
+- Prescription(Ruth)
+- Appointment(Johnson)
 
 # Attributes 
 - Doctor(id, name, specialization)
