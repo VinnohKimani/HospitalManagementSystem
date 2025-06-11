@@ -6,6 +6,7 @@ from resourses.nurse import NurseResource
 from resourses.appointment import AppointmentResource
 from resourses.billing import BillResource
 from resourses.diagnosis import DiagnosisResource
+from resourses.prescriptions import Prescriptions
 
 app = Flask(__name__)
 api = Api(app)
@@ -17,3 +18,4 @@ api.add_resource(NurseResource, "/nurses", "/nurses/<int:id>")
 api.add_resource(AppointmentResource, "/appointments", "/appointments/<int:id>")
 api.add_resource(BillResource, "/bills", "/bills/<int:id>")
 api.add_resource(DiagnosisResource, "/diagnoses", "/diagnoses/<int:id>")
+api.add_resource(Prescriptions, "/prescriptions", "/prescriptions/<int:id>")
