@@ -26,10 +26,10 @@ from models.diagnosis import Diagnosis
 from resources.doctors import DoctorResource
 from resources.patient import PatientResource
 from resources.nurse import NurseResource
-from resources.appointment import AppointmentResource
-from resources.billing import BillResource
-# from resources.diagnosis import DiagnosisResource
-# from resources.prescriptions import PrescriptionsResource
+from resources.diagnosis import DiagnosisResource
+from resources.prescriptions import PrescriptionsResource
+# from resources.billing import BillResource
+# from resources.appointment import AppointmentResource
 
 
 # Linking flask resfull with app
@@ -48,7 +48,7 @@ def index():
 api.add_resource(DoctorResource, "/doctors", "/doctors/<int:id>")
 api.add_resource(PatientResource, "/patients", "/patients/<int:id>")
 api.add_resource(NurseResource, "/nurses", "/nurses/<int:id>")
-api.add_resource(AppointmentResource, "/appointments", "/appointments/<int:id>")
-api.add_resource(BillResource, "/bills", "/bills/<int:id>")
-# api.add_resource(DiagnosisResource, "/diagnoses", "/diagnoses/<int:id>")
-# api.add_resource(PrescriptionsResource, "/prescriptions", "/prescriptions/<int:id>")
+api.add_resource(DiagnosisResource, "/diagnoses", "/diagnoses/<int:id>")
+api.add_resource(PrescriptionsResource, "/prescriptions", "/prescriptions/<int:id>")
+# api.add_resource(AppointmentResource, "/appointments", "/appointments/<int:id>")
+# api.add_resource(BillResource, "/bills", "/bills/<int:id>")
