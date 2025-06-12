@@ -1,6 +1,6 @@
 from flask_restful import Resource
 
-class Prescriptions(Resource):
+class PrescriptionsResource(Resource):
     def get(self, id=None):
         if id == "None":
             return []

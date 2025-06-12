@@ -1,4 +1,4 @@
-from Models.db import db
+from . import db
 
 # metadata = MetaData()
 # #db instance

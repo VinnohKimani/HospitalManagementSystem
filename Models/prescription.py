@@ -1,5 +1,5 @@
 from datetime import datetime
-from Models.db import db
+from . import db
 
 
 # metadata = MetaData()

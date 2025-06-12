@@ -1,7 +1,8 @@
 from sqlalchemy import  ForeignKey
 from datetime import datetime
 from doctors import Doctor
-from Models.db import db
+
+from . import db
 
 class Patients(db.model):
     __tablename__ = "patients"

@@ -1,5 +1,5 @@
 # Imports
-from Models.db import db
+from . import db
 # This allows us to define tables and their columns
 # Doing this for Readability
 

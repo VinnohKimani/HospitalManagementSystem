@@ -1,8 +1,8 @@
 from flask_restful import Resource
 
 class DoctorResource(Resource):
-    def  get(self, doctor_id = None):
-        if doctor_id == "None":
+    def  get(self,id = None):
+        if id == "None":
             return []
         else:
             return []
@@ -10,9 +10,9 @@ class DoctorResource(Resource):
     def post(self):
         return {"message": "Doctor Created"}
 
-    def patch(self, doctor_id):
+    def patch(self, id):
         return {"message": "Doctor Updated"}
 
-    def delete(self, doctor_id):
+    def delete(self, id):
         return {"message": "Doctor Deleted"}
  
