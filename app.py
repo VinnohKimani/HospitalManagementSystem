@@ -1,7 +1,6 @@
 from flask import Flask
 from flask_restful import Api
-from flask_migrate import Migrate
-from Models.doctors import db
+
 from resourses.doctors import DoctorResource
 from resourses.patient import PatientResource
 from resourses.nurse import NurseResource
@@ -18,11 +17,6 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///hospitalManagementSystem.db"
 # Linking flask resfull with app
 api = Api(app)
 
-# Creating a migrate object to mange migrations
-migrate = Migrate(app, db)
-
-# Link db with flask app
-db.init_app(app)
 
 
 api.add_resource(DoctorResource, "/doctors", "/doctors/<int:doctor_id>")

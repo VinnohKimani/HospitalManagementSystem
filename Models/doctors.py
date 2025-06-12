@@ -6,13 +6,12 @@ from flask_sqlalchemy import SQLAlchemy
 metadata = MetaData()
 
 # db instance
-db = SQLAlchemy(metadata = metadata)
+db = SQLAlchemy(metadata=metadata)
 
 
 class Doctor(db.Model):
     __tablename__ = "doctors"
 
-    id = db.Column(db.Integer, primary_key = True)
+    id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text)
     specialization = db.Column(db.Text)
-    
