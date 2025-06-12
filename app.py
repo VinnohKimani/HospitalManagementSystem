@@ -19,8 +19,8 @@ from Models.patient import Patients
 from Models.nurse import Nurse
 from Models.prescription import Prescriptions
 from Models.diagnosis import Diagnosis
-from Models.appointment import *
-from Models.billing import *
+# from Models.appointment import *
+# from Models.billing import *
 
 # import resources
 from resourses.doctors import DoctorResource
@@ -28,8 +28,8 @@ from resourses.patient import PatientResource
 from resourses.nurse import NurseResource
 from resourses.appointment import AppointmentResource
 from resourses.billing import BillResource
-from resourses.diagnosis import DiagnosisResource
-from resourses.prescriptions import PrescriptionsResource
+# from resourses.diagnosis import DiagnosisResource
+# from resourses.prescriptions import PrescriptionsResource
 
 
 # Linking flask resfull with app

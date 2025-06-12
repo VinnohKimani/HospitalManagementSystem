@@ -1,12 +1,15 @@
 from flask_restful import Resource
+from Models.diagnosis import Diagnosis
 
 
 class DiagnosisResource(Resource):
     def get(self, id=None):
         if id == "None":
-            return []
+            diagnosis = Diagnosis.query.all()
+            return diagnosis
         else:
-            return []
+            diag = Diagnosis.query.filter_by(id=id).first()
+            return diag
 
     def post(self):
         return {"message": "Diagnosis Created"}

@@ -1,12 +1,15 @@
 from flask_restful import Resource
+from Models.patient import Patients
 
 
 class PatientResource(Resource):
     def get(self, id=None):
         if id == "None":
-            return []
+            patients = Patients.query.all()
+            return patients
         else:
-            return []
+            patient = Patients.query.filter_by(id=id).first()
+            return patient
 
     def post(self):
         return {"message": "Paitent Created"}

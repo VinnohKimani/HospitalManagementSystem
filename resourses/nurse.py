@@ -1,13 +1,15 @@
-
 from flask_restful import Resource
+from Models.nurse import Nurse
 
 
 class NurseResource(Resource):
     def get(self, id=None):
         if id == "None":
-            return []
+            nurses = Nurse.query.all()
+            return nurses
         else:
-            return []
+            nurse = Nurse.query.filter_by(id=id).first()
+            return nurse
 
     def post(self):
         return {"message": "Nurse Created"}

@@ -1,12 +1,16 @@
 from flask_restful import Resource
+from Models.doctors import Doctor
+
 
 class DoctorResource(Resource):
-    def  get(self,id = None):
+    def get(self, id=None):
         if id == "None":
-            return []
+            doctors = Doctor.query.all()
+            return doctors
         else:
-            return []
-        
+            doctor = Doctor.query.filter_by(id=id).first()
+            return doctor
+
     def post(self):
         return {"message": "Doctor Created"}
 
@@ -15,4 +19,3 @@ class DoctorResource(Resource):
 
     def delete(self, id):
         return {"message": "Doctor Deleted"}
- 
