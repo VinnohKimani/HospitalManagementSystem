@@ -1,6 +1,6 @@
 from sqlalchemy import ForeignKey
-from patient import Patients
-from Models.db import db
+from models.patient import Patients
+from . import db
 
 # metadata = MetaData()
 

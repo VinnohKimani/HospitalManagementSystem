@@ -1,11 +1,15 @@
 from flask_restful import Resource
+from models.prescription import Prescriptions
 
-class Prescriptions(Resource):
+
+class PrescriptionsResource(Resource):
     def get(self, id=None):
-        if id == "None":
-            return []
+        if id == None:
+            prescs = Prescriptions.query.all()
+            return prescs
         else:
-            return []
+            presc = Prescriptions.query.filter_by(id=id).first()
+            return presc
 
     def post(self):
         return {"message": "Prescriptions Created Testing push"}
