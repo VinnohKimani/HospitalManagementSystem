@@ -27,14 +27,17 @@
 - Appointment(id, created_at, deleted_at, patient_id, doctor_id)
       
 # Relationship
-- Doctor and Patient (One to many)
+- Doctor and Patient (One to many) ---->(Association Technique(One to many))
 - Patient and Billing (One to many)
 - Nurse and Patient (Many to many)
 - Patient and Prescription (One to One)
 - Patient and Appointment (One to many)
-- Patient and Diagnosis (One to many)
+- Patient and Diagnosis (One to many)--->(Aggregation Technique (One to many relationship))
+
+
+# Things To Confirm 
+- Relationship between Doctor and Patient (Is nurse an intemidiary class) making the       relationship many to many
 
       
        
    
- 

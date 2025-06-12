@@ -18,6 +18,11 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///hospitalManagementSystem.db"
 # Linking flask resfull with app
 api = Api(app)
 
+migrate = Migrate(app, db)
+
+# Links db to flask app
+db.init_app(app)
+
 
 
 api.add_resource(DoctorResource, "/doctors", "/doctors/<int:doctor_id>")

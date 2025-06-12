@@ -1,10 +1,10 @@
-from sqlalchemy import MetaData, ForeignKey
-from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import ForeignKey
 from patient import Patients
+from Models.db import db
 
-metadata = MetaData()
+# metadata = MetaData()
 
-db = SQLAlchemy(metadata=metadata)
+# db = SQLAlchemy(metadata=metadata)
 
 
 class Diagnosis(db.Model):

@@ -1,11 +1,8 @@
-# Imports
-from sqlalchemy import MetaData
-from flask_sqlalchemy import SQLAlchemy
+from Models.db import db
 
-
-metadata = MetaData()
-#db instance
-db = SQLAlchemy(metadata=metadata)
+# metadata = MetaData()
+# #db instance
+# db = SQLAlchemy(metadata=metadata)
 
 class Nurse(db.model):
     __tablename__ = "nurses"
