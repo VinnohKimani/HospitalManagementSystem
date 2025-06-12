@@ -34,6 +34,7 @@
 - Patient and Appointment (One to many)
 - Patient and Diagnosis (One to many)--->(Aggregation Technique (One to many relationship))
 
+
 # Things To Confirm 
 - Relationship between Doctor and Patient (Is nurse an intemidiary class) making the       relationship many to many
 

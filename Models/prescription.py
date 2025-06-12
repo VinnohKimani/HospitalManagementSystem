@@ -1,9 +1,9 @@
-from sqlalchemy import MetaData
-from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+from Models.db import db
 
-metadata = MetaData()
-db = SQLAlchemy(metadata=metadata)
+
+# metadata = MetaData()
+# db = SQLAlchemy(metadata=metadata)
 
 
 class Prescriptions(db.model):

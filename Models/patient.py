@@ -1,10 +1,10 @@
-from sqlalchemy import MetaData, ForeignKey
-from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import  ForeignKey
 from datetime import datetime
 from doctors import Doctor
+from Models.db import db
 
-metadata = MetaData()
-db = SQLAlchemy(metadata=metadata)
+# metadata = MetaData()
+# db = SQLAlchemy(metadata=metadata)
 
 
 class Patients(db.model):

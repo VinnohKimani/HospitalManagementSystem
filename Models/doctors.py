@@ -1,12 +1,12 @@
 # Imports
-from sqlalchemy import MetaData
-from flask_sqlalchemy import SQLAlchemy
-
+from Models.db import db
 # This allows us to define tables and their columns
-metadata = MetaData()
+# Doing this for Readability
 
-# db instance
-db = SQLAlchemy(metadata=metadata)
+# metadata = MetaData()
+
+# # db instance
+# db = SQLAlchemy(metadata=metadata)
 
 
 class Doctor(db.Model):
