@@ -1,7 +1,6 @@
 from flask import Flask
 from flask_restful import Api
 from flask_migrate import Migrate
-from Models.db import db
 
 from resourses.doctors import DoctorResource
 from resourses.patient import PatientResource

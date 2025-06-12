@@ -3,10 +3,6 @@ from datetime import datetime
 from doctors import Doctor
 from Models.db import db
 
-# metadata = MetaData()
-# db = SQLAlchemy(metadata=metadata)
-
-
 class Patients(db.model):
     __tablename__ = "patients"
 
