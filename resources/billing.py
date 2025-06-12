@@ -1,10 +1,10 @@
 from flask_restful import Resource
-from Models.billing import Billing
+from models.billing import Billing
 
 
 class BillResource(Resource):
     def get(self, id=None):
-        if id == "None":
+        if id == None:
             bills = Billing.query.all()
             return bills
         else:

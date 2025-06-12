@@ -6,7 +6,7 @@ from . import db
 # db = SQLAlchemy(metadata=metadata)
 
 
-class Prescriptions(db.model):
+class Prescriptions(db.Model):
     __tablename__ = "prescriptions"
 
     id = db.Column(db.Integer, Primary_Key=True)

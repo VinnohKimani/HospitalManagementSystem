@@ -1,10 +1,12 @@
-from sqlalchemy import  ForeignKey
+from sqlalchemy import ForeignKey
 from datetime import datetime
 from doctors import Doctor
 
+# from . import db` which implies the model is in the same directory as `db.py`
 from . import db
 
-class Patients(db.model):
+
+class Patients(db.Model):
     __tablename__ = "patients"
 
     id = db.Column(db.Integer, Primary_Key=True)

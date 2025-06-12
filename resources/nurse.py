@@ -1,10 +1,10 @@
 from flask_restful import Resource
-from Models.nurse import Nurse
+from models.nurse import Nurse
 
 
 class NurseResource(Resource):
     def get(self, id=None):
-        if id == "None":
+        if id == None:
             nurses = Nurse.query.all()
             return nurses
         else:

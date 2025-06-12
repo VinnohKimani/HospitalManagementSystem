@@ -1,10 +1,10 @@
 from flask_restful import Resource
-from Models.diagnosis import Diagnosis
+from models.diagnosis import Diagnosis
 
 
 class DiagnosisResource(Resource):
     def get(self, id=None):
-        if id == "None":
+        if id == None:
             diagnosis = Diagnosis.query.all()
             return diagnosis
         else:

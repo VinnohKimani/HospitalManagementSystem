@@ -1,10 +1,10 @@
 from flask_restful import Resource
-from Models.doctors import Doctor
+from models.doctors import Doctor
 
 
 class DoctorResource(Resource):
     def get(self, id=None):
-        if id == "None":
+        if id == None:
             doctors = Doctor.query.all()
             return doctors
         else:
