@@ -4,6 +4,7 @@ from datetime import datetime
 from doctors import Doctor
 
 metadata = MetaData()
+
 db = SQLAlchemy(metadata=metadata)
 
 
