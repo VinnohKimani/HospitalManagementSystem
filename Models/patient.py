@@ -12,7 +12,6 @@ class Patients(db.model):
 
     id = db.Column(db.Integer, Primary_Key=True)
     name = db.Column(db.Text, nullable=False)
-    diagnosis_id = db.Column(db.Integer)
     dob = db.Column(db.Integer)
     history = db.Column(db.String)
     doctor_id = db.Column(db.integer, ForeignKey(Doctor.id))

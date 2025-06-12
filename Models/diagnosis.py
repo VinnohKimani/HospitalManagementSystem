@@ -1,13 +1,15 @@
-from sqlalchemy import MetaData
+from sqlalchemy import MetaData, ForeignKey
 from flask_sqlalchemy import SQLAlchemy
+from patient import Patients
 
 metadata = MetaData()
 
-db  = SQLAlchemy(metadata= metadata)
+db = SQLAlchemy(metadata=metadata)
 
-class Daignosis(db.Model):
+
+class Diagnosis(db.Model):
     __talename__ = "diagnoses"
 
-    id = db.Column(db.Integer, primary_key= True)
+    id = db.Column(db.Integer, primary_key=True)
     diagnosis_note = db.Column(db.Text)
-
+    patient_id = db.Column(db.Integer, ForeignKey(Patients.id))
