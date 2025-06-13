@@ -13,12 +13,12 @@ app.config["SQLALCHEMY_ECHO"] = True
 # Links db to flask app
 db.init_app(app)
 
-# import models
-from models.doctors import Doctor
-from models.patient import Patients
-from models.nurse import Nurse
-from models.prescription import Prescriptions
-from models.diagnosis import Diagnosis
+# import models - our models are being imported in the resources
+# from models.doctors import Doctor
+# from models.patient import Patients
+# from models.nurse import Nurse
+# from models.prescription import Prescriptions
+# from models.diagnosis import Diagnosis
 # from Models.appointment import *
 # from Models.billing import *
 
